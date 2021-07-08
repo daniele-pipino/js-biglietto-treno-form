@@ -20,7 +20,7 @@ Tariffa applicata all'utente (Tariffa minori, Tariffa ordinaria, Tariffa Over65)
 // recupero elementi html
 
 var username = document.getElementById('name');
-var kms = document.getElementById('Kilometres');
+var kms = document.getElementById('Kilometers');
 var userage = document.getElementById('Age');
 
 // recupero id buttons
@@ -38,7 +38,10 @@ generateButton.addEventListener('click', function () {
 
     // recupero value utente
     var userNameCompilate = username.value;
+    console.log(userNameCompilate);
     var kmsCompilate = kms.value;
+    console.log(kmsCompilate);
     var userageCompilate = userage.value;
+    console.log(userageCompilate);
 
 })
