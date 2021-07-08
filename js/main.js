@@ -35,6 +35,7 @@ var passengerName = document.getElementById('passenger-name');
 var discount = document.getElementById('discount');
 var vagon = document.getElementById('vagon');
 var finalPrice = document.getElementById('final-price');
+var trainCode = document.getElementById('train-code');
 
 // prezzo km
 
@@ -61,9 +62,14 @@ generateButton.addEventListener('click', function () {
         discount.innerText = 'Sconto over 65';
     }
 
-    // 
+    // randomizzare numero carrozza
+
+    vagonNumber = Math.floor(Math.random() * 12) + 1;
 
     //inserimento dei valori recuperati negli appositi campi
     passengerName.innerText = userNameCompilate;
     finalPrice.innerText = ticketPrice.toFixed(2);
+    vagon.innerText = vagonNumber;
+    trainCode.innerText = '12675';
+
 })
