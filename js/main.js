@@ -31,11 +31,13 @@ var cancelButton = document.getElementById('cancel-button');
 
 // recupero elementi ticket section
 
+var ticketSection = document.getElementById('ticket-section');
 var passengerName = document.getElementById('passenger-name');
 var discount = document.getElementById('discount');
 var vagon = document.getElementById('vagon');
 var finalPrice = document.getElementById('final-price');
 var trainCode = document.getElementById('train-code');
+
 
 // prezzo km
 
@@ -70,8 +72,10 @@ generateButton.addEventListener('click', function () {
 
     //inserimento dei valori recuperati negli appositi campi
     passengerName.innerText = userNameCompilate;
-    finalPrice.innerText = ticketPrice.toFixed(2);
+    finalPrice.innerText = ticketPrice.toFixed(2) + ' Euro';
     vagon.innerText = vagonNumber;
     trainCode.innerText = '12675';
 
+    // comparsa della sezione ticket
+    ticketSection.classList.remove('hidden');
 })
