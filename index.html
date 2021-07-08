@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Generatore biglietto treno</title>
+</head>
+
+<body>
+    <!-- input section -->
+    <section id="input-section">
+        <h1 class="my">Calcola il prezzo del tuo biglietto</h1>
+        <div class="container bg-red">
+            <!-- Passenger Name -->
+            <label for="name">Nome Passeggero</label>
+            <input class="mr" type="text" name="" id="name" placeholder="Inserisci il tuo nome">
+            <!-- Kilometers -->
+            <label for="kilometers">KM da percorrere</label>
+            <input class="mr" type="number" name="" id="Kilometers">
+            <!-- userage -->
+            <label for="Age">Fascia d'età</label>
+            <select class="mr" name="" id="Age">
+                <option value="Maggiorenne">Maggiorenne</option>
+                <option value="Minorenne">Minorenne</option>
+                <option value="Over-65">Over 65</option>
+            </select>
+            <!-- buttons -->
+            <div class="buttons my">
+                <button class="mr">Generate</button>
+                <button>Cancel</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ticket section -->
+    <section id="ticket-section">
+        <h1 class="my">Il tuo biglietto</h1>
+        <div class="container bg-red">
+            <h3>Nome Passeggero:</h3>
+            <h3>Offerta:</h3>
+            <h3>Carrozza:</h3>
+            <h3>Prezzo:</h3>
+        </div>
+    </section>
+</body>
+
+</html>
