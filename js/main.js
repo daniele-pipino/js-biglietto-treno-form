@@ -79,3 +79,15 @@ generateButton.addEventListener('click', function () {
     // comparsa della sezione ticket
     ticketSection.classList.remove('hidden');
 })
+
+// creazione evento di reset con bottone cancel
+
+cancelButton.addEventListener('click', function () {
+
+    passengerName.innerText = '';
+    finalPrice.innerText = '';
+    vagon.innerText = '';
+    trainCode.innerText = '';
+    discount.innerText = '';
+
+})
