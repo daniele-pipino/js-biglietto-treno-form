@@ -16,35 +16,28 @@ Tariffa applicata all'utente (Tariffa minori, Tariffa ordinaria, Tariffa Over65)
 // 5- inserire i value nei loro rispettivi posti
 
 
-
-// recupero elementi input
-
-var username = document.getElementById('name');
-var kms = document.getElementById('Kilometers');
-var userAge = document.getElementById('Age');
-
-
-// recupero id buttons
-
-var generateButton = document.getElementById('generate-button');
-var cancelButton = document.getElementById('cancel-button');
-
-// recupero elementi ticket section
-
-var ticketSection = document.getElementById('ticket-section');
-var passengerName = document.getElementById('passenger-name');
-var discount = document.getElementById('discount');
-var vagon = document.getElementById('vagon');
-var finalPrice = document.getElementById('final-price');
-var trainCode = document.getElementById('train-code');
-
-
 // prezzo km
-
 var price = 0.21;
 
 // creazione evento 
 generateButton.addEventListener('click', function () {
+
+    // recupero elementi input
+    var username = document.getElementById('name');
+    var kms = document.getElementById('Kilometers');
+    var userAge = document.getElementById('Age');
+
+    // recupero id buttons
+    var generateButton = document.getElementById('generate-button');
+    var cancelButton = document.getElementById('cancel-button');
+
+    // recupero elementi ticket section
+    var ticketSection = document.getElementById('ticket-section');
+    var passengerName = document.getElementById('passenger-name');
+    var discount = document.getElementById('discount');
+    var vagon = document.getElementById('vagon');
+    var finalPrice = document.getElementById('final-price');
+    var trainCode = document.getElementById('train-code');
 
     // recupero value utente
     var userNameCompilate = username.value;
