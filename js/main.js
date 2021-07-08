@@ -17,31 +17,53 @@ Tariffa applicata all'utente (Tariffa minori, Tariffa ordinaria, Tariffa Over65)
 
 
 
-// recupero elementi html
+// recupero elementi input
 
 var username = document.getElementById('name');
 var kms = document.getElementById('Kilometers');
-var userage = document.getElementById('Age');
+var userAge = document.getElementById('Age');
+
 
 // recupero id buttons
 
 var generateButton = document.getElementById('generate-button');
-var cancelbutton = document.getElementById('cancel-button');
+var cancelButton = document.getElementById('cancel-button');
+
+// recupero elementi ticket section
+
+var passengerName = document.getElementById('passenger-name');
+var discount = document.getElementById('discount');
+var vagon = document.getElementById('vagon');
+var finalPrice = document.getElementById('final-price');
 
 // prezzo km
 
 var price = 0.21;
 
 // creazione evento 
-
 generateButton.addEventListener('click', function () {
 
     // recupero value utente
     var userNameCompilate = username.value;
-    console.log(userNameCompilate);
     var kmsCompilate = kms.value;
-    console.log(kmsCompilate);
-    var userageCompilate = userage.value;
-    console.log(userageCompilate);
+    var userageCompilate = userAge.value;
 
+    // prezzobiglietto
+    var ticketPrice = price * kms.value;
+    console.log(ticketPrice);
+
+    if (userageCompilate === 'Minorenne') {
+        ticketPrice *= 0.8;
+        discount.innerText = 'Sconto minori';
+
+    } else if (userageCompilate === 'over-65') {
+        ticketPrice *= 0.6;
+        discount.innerText = 'Sconto over 65';
+    }
+
+    // 
+
+    //inserimento dei valori recuperati negli appositi campi
+    passengerName.innerText = userNameCompilate;
+    finalPrice.innerText = ticketPrice.toFixed(2);
 })

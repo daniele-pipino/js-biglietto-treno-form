@@ -32,6 +32,10 @@
 .bg-red{
     background-color: brown;
 }
+
+.text-white{
+    color: white;
+}
 /* input section */
 
 section{
