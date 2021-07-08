@@ -37,7 +37,8 @@ var price = 0.21;
 generateButton.addEventListener('click', function () {
 
     // recupero value utente
-    var userName = username.value;
-    console.log(userName)
+    var userNameCompilate = username.value;
+    var kmsCompilate = kms.value;
+    var userageCompilate = userage.value;
 
 })
