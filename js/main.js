@@ -60,6 +60,8 @@ generateButton.addEventListener('click', function () {
     } else if (userageCompilate === 'over-65') {
         ticketPrice *= 0.6;
         discount.innerText = 'Sconto over 65';
+    } else {
+        discount.innerText = 'Tariffa Ordinaria';
     }
 
     // randomizzare numero carrozza
