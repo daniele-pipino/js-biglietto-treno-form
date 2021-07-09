@@ -19,6 +19,9 @@ Tariffa applicata all'utente (Tariffa minori, Tariffa ordinaria, Tariffa Over65)
 // prezzo km
 var price = 0.21;
 
+var generateButton = document.getElementById('generate-button');
+var cancelButton = document.getElementById('cancel-button');
+
 // creazione evento 
 generateButton.addEventListener('click', function () {
 
@@ -28,8 +31,7 @@ generateButton.addEventListener('click', function () {
     var userAge = document.getElementById('Age');
 
     // recupero id buttons
-    var generateButton = document.getElementById('generate-button');
-    var cancelButton = document.getElementById('cancel-button');
+
 
     // recupero elementi ticket section
     var ticketSection = document.getElementById('ticket-section');
@@ -77,10 +79,18 @@ generateButton.addEventListener('click', function () {
 
 cancelButton.addEventListener('click', function () {
 
-    passengerName.innerText = '';
-    finalPrice.innerText = '';
-    vagon.innerText = '';
-    trainCode.innerText = '';
-    discount.innerText = '';
+    // passengerName.innerText = '';
+    // finalPrice.innerText = '';
+    // vagon.innerText = '';
+    // trainCode.innerText = '';
+    // discount.innerText = '';
+
+    var resultElements = document.getElementsByClassName('result');
+
+    for (var i = 0; i < resultElements.length; i++) {
+        var currentElement = resultElements[i];
+        currentElement.innerText = '';
+
+    }
 
 })
